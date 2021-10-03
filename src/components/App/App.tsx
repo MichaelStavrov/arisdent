@@ -6,6 +6,7 @@ import classes from './App.module.css';
 import About from '../../pages/About';
 import Staff from '../../pages/Staff';
 import Prices from '../../pages/Prices';
+import Contacts from '../../pages/Contacts';
 import Footer from '../layouts/Footer';
 import { ReactComponent as ArrowUp } from '../../assets/images/arrowUp.svg';
 
@@ -50,10 +51,7 @@ const App: FC = () => {
           <Route exact path='/' component={About} />
           <Route path='/staff' component={Staff} />
           <Route path='/prices' component={Prices} />
-          {/* <Route path='/about' component={AboutMe} />
-            <Route path='/services' component={Services} />
-            <Route path='/contacts' component={Contacts} />
-            <Route path='*' component={NotFound404} /> */}
+          <Route path='/contacts' component={Contacts} />
         </Switch>
       </main>
       <Footer />
