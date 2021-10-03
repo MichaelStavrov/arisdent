@@ -16,8 +16,17 @@ const Contacts: FC = () => {
   return (
     <HelmetedPage
       meta={[
-        { id: 1, name: 'description', content: '' },
-        { id: 2, name: 'keywords', content: '' },
+        {
+          id: 1,
+          name: 'description',
+          content: 'Маршрут до стоматологической клиники Арисдент',
+        },
+        {
+          id: 2,
+          name: 'keywords',
+          content:
+            'как добраться до Арисдент, маршрут до Арисдент, ближайшая стоматология',
+        },
       ]}
       title='Контакты стоматологии Арисдент'
     >
@@ -84,4 +93,3 @@ const Contacts: FC = () => {
 };
 
 export default Contacts;
-//   defaultState={{ center: [55.85726, 37.563323], zoom: 17 }}

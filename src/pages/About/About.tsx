@@ -38,8 +38,16 @@ const About: FC = () => {
   return (
     <HelmetedPage
       meta={[
-        { id: 1, name: 'description', content: '' },
-        { id: 2, name: 'keywords', content: '' },
+        {
+          id: 1,
+          name: 'description',
+          content: 'Стоматологическая клиника Арисдент',
+        },
+        {
+          id: 2,
+          name: 'keywords',
+          content: 'Арисдент, стоматологическая клиника, стоматолог недорого',
+        },
       ]}
       title='Опытные врачи, с индивидуальным подходом к пациенту '
     >

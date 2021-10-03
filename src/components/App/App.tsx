@@ -7,6 +7,7 @@ import About from '../../pages/About';
 import Staff from '../../pages/Staff';
 import Prices from '../../pages/Prices';
 import Contacts from '../../pages/Contacts';
+import NotFound from '../../pages/NotFound';
 import Footer from '../layouts/Footer';
 import { ReactComponent as ArrowUp } from '../../assets/images/arrowUp.svg';
 
@@ -52,6 +53,7 @@ const App: FC = () => {
           <Route path='/staff' component={Staff} />
           <Route path='/prices' component={Prices} />
           <Route path='/contacts' component={Contacts} />
+          <Route path='*' component={NotFound} />
         </Switch>
       </main>
       <Footer />

@@ -10,8 +10,13 @@ const Staff: FC = () => {
   return (
     <HelmetedPage
       meta={[
-        { id: 1, name: 'description', content: '' },
-        { id: 2, name: 'keywords', content: '' },
+        { id: 1, name: 'description', content: 'Хороший стоматолог Москва' },
+        {
+          id: 2,
+          name: 'keywords',
+          content:
+            'качественный стоматолог, Сыренов Олег Сергеевич, Юскаев Денис Юрьевич',
+        },
       ]}
       title='Сыренов Олег Сергеевич, Юскаев Денис Юрьевич'
     >

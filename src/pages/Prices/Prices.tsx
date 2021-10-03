@@ -9,8 +9,12 @@ const Prices: FC = () => {
   return (
     <HelmetedPage
       meta={[
-        { id: 1, name: 'description', content: '' },
-        { id: 2, name: 'keywords', content: '' },
+        { id: 1, name: 'description', content: 'Недорогое лечение зубов' },
+        {
+          id: 2,
+          name: 'keywords',
+          content: 'стоматолог недорого, вылечить зубы недорого',
+        },
       ]}
       title='Цены на услуги стоматологии Арисдент'
       contentStyle={{ marginBottom: 0 }}
