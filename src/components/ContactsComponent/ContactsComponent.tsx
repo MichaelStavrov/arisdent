@@ -11,7 +11,10 @@ const ContactsComponent: FC<ContactsComponentProps> = ({ dir }) => {
       className={classes.contacts}
       style={{ flexDirection: dir === 'vertical' ? 'column' : 'row' }}
     >
-      <div className={classes.phoneNumber}>
+      <div
+        className={classes.phoneNumber}
+        style={{ margin: dir === 'horizontal' ? '0 10px 0 0' : '' }}
+      >
         <a href='tel:+79037240581'>+7 (903) 724-05-81</a>
       </div>
       <div className={classes.mail}>

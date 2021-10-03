@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Header from '../layouts/Header';
 import classes from './App.module.css';
 import About from '../../pages/About';
+import Footer from '../layouts/Footer';
 
 const App: FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: FC = () => {
             <Route path='*' component={NotFound404} /> */}
         </Switch>
       </main>
+      <Footer />
     </div>
   );
 };
