@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import { YMaps } from 'react-yandex-maps';
 
 import './index.css';
 import App from './components/App';
@@ -8,7 +9,9 @@ import reportWebVitals from './reportWebVitals';
 
 render(
   <BrowserRouter>
-    <App />
+    <YMaps>
+      <App />
+    </YMaps>
   </BrowserRouter>,
   document.getElementById('root')
 );
