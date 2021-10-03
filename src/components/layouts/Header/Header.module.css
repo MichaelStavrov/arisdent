@@ -4,6 +4,7 @@
   align-items: flex-end;
   justify-content: space-between;
   border-bottom: 1px solid var(--primary-color);
+  overflow-x: hidden;
 }
 
 .menuLogo {
@@ -96,9 +97,9 @@
   .navigation {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     bottom: 0;
-    transform: translateX(100%);
+    transform: translateX(-100%);
     z-index: 20;
     min-height: 100vh;
     min-width: 300px;
@@ -137,6 +138,7 @@
     align-items: center;
     border-bottom: 2px solid var(--primary-color);
     border-top: 2px solid var(--primary-color);
+    order: -1;
   }
 
   .strip {
@@ -164,6 +166,10 @@
 }
 
 @media (max-width: 520px) {
+  .header {
+    justify-content: flex-start;
+  }
+
   .contacts {
     display: none;
   }
