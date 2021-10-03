@@ -1,3 +1,5 @@
+import { CSSProperties } from 'react';
+
 export interface HelmetedPageMeta {
   id: string | number;
   name: 'description' | 'keywords';
@@ -7,4 +9,5 @@ export interface HelmetedPageMeta {
 export interface HelmetedPageProps {
   meta: HelmetedPageMeta[];
   title: string;
+  contentStyle?: CSSProperties;
 }

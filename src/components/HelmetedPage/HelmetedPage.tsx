@@ -5,7 +5,12 @@ import classes from './HelmetedPage.module.css';
 import Container from '../layouts/Container';
 import { HelmetedPageProps } from './types';
 
-const HelmetedPage: FC<HelmetedPageProps> = ({ children, meta, title }) => {
+const HelmetedPage: FC<HelmetedPageProps> = ({
+  children,
+  meta,
+  title,
+  contentStyle,
+}) => {
   return (
     <>
       <Helmet>
@@ -16,7 +21,9 @@ const HelmetedPage: FC<HelmetedPageProps> = ({ children, meta, title }) => {
       </Helmet>
       <section>
         <Container>
-          <div className={classes.content}>{children}</div>
+          <div className={classes.content} style={contentStyle}>
+            {children}
+          </div>
         </Container>
       </section>
     </>

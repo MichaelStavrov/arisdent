@@ -1,0 +1,128 @@
+.titlePage {
+  display: none;
+}
+
+.titleContainer {
+  padding: 25px 50px;
+  margin-bottom: 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+.titleContainer p {
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+.pricesTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th {
+  padding-bottom: 7px;
+  font-weight: 400;
+  text-align: left;
+  font-size: 24px;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.tableBody {
+  padding: 10px 0;
+}
+
+.cell {
+  padding: 10px 10px 10px 0;
+}
+
+.leftColumn {
+  border-right: 1px solid var(--primary-color);
+  width: 75%;
+}
+
+.service,
+.price,
+.subTitle {
+  font-size: 18px;
+}
+
+.subTitle {
+  color: var(--primary-color);
+  margin-left: -50px;
+}
+
+.price {
+  padding-left: 20px;
+}
+
+.cellTitle {
+  padding-left: 50px;
+}
+
+.smallTitle {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .titleContainer {
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+  }
+
+  .titleContainer p {
+    font-size: 14px;
+    color: var(--primary-color);
+  }
+
+  .cell,
+  .subTitle {
+    font-size: 14px;
+  }
+
+  .cellTitle {
+    padding-left: 30px;
+    font-size: 20px;
+  }
+
+  .subTitle {
+    margin-left: -30px;
+  }
+
+  .th {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .titleContainer {
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+  }
+
+  .titleContainer p {
+    font-size: 12px;
+    color: var(--primary-color);
+  }
+
+  .cell,
+  .subTitle {
+    font-size: 12px;
+  }
+
+  .cellTitle {
+    padding-left: 20px;
+    font-size: 18px;
+  }
+
+  .subTitle {
+    margin-left: -20px;
+  }
+
+  .th {
+    font-size: 18px;
+  }
+}
