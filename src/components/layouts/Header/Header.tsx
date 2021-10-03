@@ -1,5 +1,5 @@
 import React, { FC, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import cn from 'classnames';
 
 import Container from '../Container';
@@ -9,6 +9,8 @@ import Logo from '../../Logo';
 
 const Header: FC = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const location = useLocation();
 
   document.addEventListener('click', (e) => {
     setShowMenu(false);
@@ -21,7 +23,7 @@ const Header: FC = () => {
 
   const itemsNav = useMemo(
     () => [
-      { id: 1, name: 'О клинике', path: '/about' },
+      { id: 1, name: 'О клинике', path: '/' },
       { id: 2, name: 'Врачи', path: '/staff' },
       { id: 3, name: 'Цены', path: '/prices' },
       { id: 4, name: 'Контакты', path: '/contacts' },
@@ -45,7 +47,13 @@ const Header: FC = () => {
             </div>
             <ul className={classes.navList}>
               {itemsNav.map(({ id, name, path }) => (
-                <li className={classes.navItem} key={id}>
+                <li
+                  className={cn(classes.navItem, {
+                    [classes.itemNavActive]:
+                      location.pathname === path && !showMenu,
+                  })}
+                  key={id}
+                >
                   <Link to={path}>{name}</Link>
                 </li>
               ))}

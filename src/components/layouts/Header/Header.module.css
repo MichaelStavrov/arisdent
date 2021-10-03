@@ -26,7 +26,8 @@
   transition: margin-bottom 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.navItem:hover {
+.navItem:hover,
+.itemNavActive {
   border-bottom: 1px solid var(--primary-color);
   margin-top: -4px;
   color: var(--primary-color);

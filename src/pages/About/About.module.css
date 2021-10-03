@@ -1,0 +1,79 @@
+.content {
+  max-width: 975px;
+  margin: 45px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titlePage {
+  display: none;
+}
+
+.title {
+  margin-bottom: 38px;
+  font-size: 36px;
+  padding: 30px 67px;
+  text-align: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+.personInfo {
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.personDescription b:first-child {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.paragraphTitle {
+  font-size: 36px;
+}
+
+.summary {
+  margin: 49px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.advantages {
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.advantageContainer {
+  padding: 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+.advantageContainer b {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.licensesTitle {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.licenses {
+  margin: 35px 0;
+  padding: 35px 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+}
