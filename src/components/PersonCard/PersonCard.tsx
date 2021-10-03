@@ -6,7 +6,12 @@ import { PersonCardProps } from './types';
 const PersonCard: FC<PersonCardProps> = ({ image, alt, width, height }) => {
   return (
     <div className={classes.card}>
-      <img src={image} alt={alt} style={{ width, height }} />
+      <img
+        className={classes.img}
+        src={image}
+        alt={alt}
+        style={{ width, height }}
+      />
     </div>
   );
 };

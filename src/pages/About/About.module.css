@@ -1,6 +1,7 @@
 .content {
   max-width: 975px;
   margin: 45px auto;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,6 +20,12 @@
   border-radius: 10px;
 }
 
+.cardWrapper {
+  width: 339px;
+  height: 253px;
+  margin-right: 40px;
+}
+
 .personInfo {
   margin-bottom: 30px;
   width: 100%;
@@ -26,13 +33,22 @@
   justify-content: space-between;
 }
 
+.personDescription {
+  display: flex;
+  flex-direction: column;
+}
+
 .personDescription b:first-child {
   font-size: 36px;
   font-weight: 400;
 }
 
+.mainPersonDescriptionSmallSize {
+  display: none;
+}
+
 .paragraphTitle {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .summary {
@@ -45,7 +61,7 @@
 .advantages {
   margin: 40px 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
   gap: 40px;
 }
 
@@ -69,11 +85,234 @@
 
 .licenses {
   margin-top: 35px;
-  padding: 35px 68px;
+  padding: 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
   border: 1px solid var(--primary-color);
   border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    max-width: 850px;
+  }
+
+  .title {
+    margin-bottom: 38px;
+    font-size: 32px;
+    padding: 25px 60px;
+  }
+
+  .cardWrapper {
+    width: 300px;
+    height: 220px;
+  }
+
+  .personInfo {
+    align-items: center;
+  }
+
+  .personDescription b:first-child {
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  .paragraphTitle {
+    font-size: 32px;
+  }
+
+  .advantageContainer b {
+    font-size: 28px;
+  }
+
+  .licenses {
+    margin-top: 35px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    max-width: 600px;
+  }
+
+  .title {
+    margin-bottom: 38px;
+    font-size: 32px;
+    padding: 25px 60px;
+  }
+
+  .cardWrapper {
+    width: 300px;
+    height: 220px;
+  }
+
+  .personDescription b:first-child {
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  .paragraphTitle {
+    font-size: 32px;
+  }
+
+  .advantages {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .advantageContainer b {
+    font-size: 32px;
+  }
+
+  .mainPersonDescriptionSmallSize {
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  .mainPersonDescription {
+    display: none;
+  }
+
+  .summary {
+    margin: 20px 0;
+  }
+
+  .licenses {
+    margin-top: 35px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 680px) {
+  .cardWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .licenses {
+    margin-top: 35px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 540px) {
+  .content {
+    max-width: 420px;
+  }
+
+  .title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    padding: 15px 30px;
+  }
+
+  .cardWrapper {
+    margin-right: 10px;
+    width: auto;
+    height: auto;
+  }
+
+  .personInfo {
+    margin: 0;
+  }
+
+  .paragraphTitle {
+    font-size: 24px;
+  }
+
+  .advantages {
+    margin: 15px 0;
+  }
+
+  .advantageContainer b {
+    font-size: 24px;
+  }
+
+  .mainPersonDescriptionSmallSize {
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  .mainPersonDescription {
+    display: none;
+  }
+
+  .summary {
+    margin: 20px 0;
+  }
+
+  .licensesTitle {
+    font-size: 24px;
+  }
+
+  .licenses {
+    margin-top: 15px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .content {
+    margin: 20px auto;
+    max-width: 320px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+
+  .personInfo {
+    margin-bottom: 10px;
+  }
+
+  .personDescription b:first-child {
+    font-size: 20px;
+  }
+
+  .mainPersonDescriptionSmallSize {
+    margin-bottom: 15px;
+  }
+
+  .paragraphTitle {
+    font-size: 20px;
+  }
+
+  .advantageContainer {
+    padding: 10px;
+  }
+
+  .advantageContainer b {
+    font-size: 20px;
+  }
 }
