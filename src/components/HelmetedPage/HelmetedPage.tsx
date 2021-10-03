@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 import { Helmet } from 'react-helmet';
+
+import classes from './HelmetedPage.module.css';
 import Container from '../layouts/Container';
 import { HelmetedPageProps } from './types';
 
@@ -13,7 +15,9 @@ const HelmetedPage: FC<HelmetedPageProps> = ({ children, meta, title }) => {
         <title>{title}</title>
       </Helmet>
       <section>
-        <Container>{children}</Container>
+        <Container>
+          <div className={classes.content}>{children}</div>
+        </Container>
       </section>
     </>
   );

@@ -1,0 +1,154 @@
+.titlePage {
+  display: none;
+}
+
+.mainPerson,
+.person {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.mainPerson {
+  margin-bottom: 60px;
+}
+
+.personInfo h2 {
+  font-size: 36px;
+}
+
+.profession {
+  font-size: 24px;
+}
+
+.personDescription,
+.specialization {
+  font-size: 18px;
+}
+
+.personDescription {
+  margin: 30px 0;
+}
+
+.specialization {
+  color: var(--primary-color);
+  letter-spacing: 0.7px;
+}
+
+.personDescriptionSmallSize {
+  display: none;
+}
+
+.specializationSmallSize {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .personDescription {
+    display: none;
+  }
+
+  .personDescriptionSmallSize {
+    margin-bottom: 40px;
+    font-size: 16px;
+    display: block;
+  }
+
+  .mainPerson,
+  .person {
+    margin-bottom: 30px;
+  }
+
+  .personInfo h2 {
+    font-size: 28px;
+  }
+
+  .profession {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .personDescription,
+  .specialization {
+    font-size: 16px;
+  }
+
+  .personDescription {
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 660px) {
+  .personDescriptionSmallSize {
+    margin-bottom: 30px;
+    font-size: 14px;
+    display: block;
+  }
+
+  .mainPerson,
+  .person {
+    margin-bottom: 20px;
+  }
+
+  .personInfo h2 {
+    font-size: 22px;
+  }
+
+  .profession {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .personDescription,
+  .specialization {
+    font-size: 14px;
+  }
+
+  .personDescription {
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .personDescriptionSmallSize {
+    margin-bottom: 10px;
+    font-size: 12px;
+    display: block;
+  }
+
+  .mainPerson,
+  .person {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .personInfo h2 {
+    font-size: 18px;
+  }
+
+  .profession {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .specialization {
+    display: none;
+  }
+
+  .specializationSmallSize {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .personDescription,
+  .specializationSmallSize {
+    color: var(--primary-color);
+    font-size: 12px;
+  }
+
+  .personDescription {
+    margin: 30px 0;
+  }
+}

@@ -38,14 +38,12 @@
 
 @media (max-width: 768px) {
   .contacts {
-    font-size: 20px;
-    flex-grow: 1;
+    flex-direction: column !important;
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   .contacts {
-    font-size: 16px;
-    flex-grow: 1;
+    display: none;
   }
 }

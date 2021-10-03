@@ -1,12 +1,3 @@
-.content {
-  max-width: 975px;
-  margin: 45px auto;
-  padding: 0 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .titlePage {
   display: none;
 }
