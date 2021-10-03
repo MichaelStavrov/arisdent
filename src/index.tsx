@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { render, hydrate } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { YMaps } from 'react-yandex-maps';
 
@@ -7,14 +7,26 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
-render(
-  <BrowserRouter>
-    <YMaps>
-      <App />
-    </YMaps>
-  </BrowserRouter>,
-  document.getElementById('root')
-);
+const rootElement = document.getElementById('root');
+if (rootElement?.hasChildNodes()) {
+  hydrate(
+    <BrowserRouter>
+      <YMaps>
+        <App />
+      </YMaps>
+    </BrowserRouter>,
+    rootElement
+  );
+} else {
+  render(
+    <BrowserRouter>
+      <YMaps>
+        <App />
+      </YMaps>
+    </BrowserRouter>,
+    rootElement
+  );
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
