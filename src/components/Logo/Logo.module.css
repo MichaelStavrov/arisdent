@@ -52,8 +52,8 @@
 
 @media (max-width: 960px) {
   .iconLogo {
-    width: 40px;
-    height: 30px;
+    width: 45px;
+    height: 40px;
   }
 
   .title {
@@ -70,8 +70,8 @@
 
 @media (max-width: 835px) {
   .iconLogo {
-    width: 30px;
-    height: 20px;
+    width: 35px;
+    height: 30px;
   }
 
   .title {
@@ -131,7 +131,7 @@
 @media (max-width: 375px) {
   .iconLogo {
     width: 30px;
-    height: 20px;
+    height: 27px;
   }
 
   .title {

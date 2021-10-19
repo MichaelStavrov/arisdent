@@ -3,7 +3,6 @@
 }
 
 .title {
-  margin-bottom: 38px;
   font-size: 36px;
   padding: 30px 67px;
   text-align: center;
@@ -43,7 +42,7 @@
 }
 
 .summary {
-  margin: 49px 0;
+  margin: 40px 0;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -75,6 +74,7 @@
 }
 
 .licenses {
+  position: relative;
   margin-top: 35px;
   padding: 35px;
   display: flex;
@@ -86,13 +86,33 @@
   border-radius: 10px;
 }
 
+.license {
+  cursor: pointer;
+  width: 252px;
+  height: 346px;
+  transition: all 0.2s ease-in-out;
+}
+
+.licenseScalable {
+  transform: scale(2.5);
+  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 1268px) {
+  .licenseScalable:first-child {
+    margin-left: 150px;
+  }
+  .licenseScalable:last-child {
+    order: 0;
+  }
+}
+
 @media (max-width: 1000px) {
   .content {
     max-width: 850px;
   }
 
   .title {
-    margin-bottom: 38px;
     font-size: 32px;
     padding: 25px 60px;
   }
@@ -137,7 +157,6 @@
   }
 
   .title {
-    margin-bottom: 38px;
     font-size: 32px;
     padding: 25px 60px;
   }
@@ -207,6 +226,10 @@
     border: 1px solid var(--primary-color);
     border-radius: 10px;
   }
+
+  .licenseScalable:first-child {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 540px) {
@@ -215,7 +238,6 @@
   }
 
   .title {
-    margin-bottom: 30px;
     font-size: 24px;
     padding: 15px 30px;
   }
@@ -278,7 +300,6 @@
   }
 
   .title {
-    margin-bottom: 20px;
     font-size: 20px;
     padding: 10px 15px;
   }
@@ -305,5 +326,10 @@
 
   .advantageContainer b {
     font-size: 20px;
+  }
+
+  .licenseScalable {
+    transform: scale(2);
+    transition: all 0.2s ease-in-out;
   }
 }

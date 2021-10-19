@@ -4,7 +4,6 @@ import {
   Placemark,
   Polyline,
   GeolocationControl,
-  RouteButton,
   FullscreenControl,
   ZoomControl,
 } from 'react-yandex-maps';
@@ -41,6 +40,10 @@ const Contacts: FC = () => {
         <a className={classes.phoneNumber} href='tel:+79037240581'>
           <span>Телефон:</span> +7 (903) 724-05-81
         </a>
+        <p>
+          <span>График работы:</span> Ежедневно с 10:00 до 20:00 по
+          предварительной записи
+        </p>
         <a className={classes.email} href='mailto:info@arisdent.com'>
           <span>E-mail: </span>info@arisdent.com
         </a>
@@ -71,19 +74,21 @@ const Contacts: FC = () => {
               [55.857515, 37.560704],
               [55.857651, 37.561955],
               [55.857533, 37.562157],
-              [55.857438, 37.563512],
+              [55.857525, 37.562428],
+              [55.857645, 37.562628],
+              [55.857586, 37.563385],
               [55.85726, 37.563323],
             ]}
             options={{
               balloonCloseButton: true,
-              strokeColor: '#333333',
-              strokeWidth: 5,
+              strokeColor: '#9564ea',
+              strokeWidth: 3,
+              strokeStyle: 'shortdash ',
               strokeOpacity: 0.9,
               editorMaxPoints: 6,
             }}
           />
           <GeolocationControl />
-          <RouteButton />
           <FullscreenControl />
           <ZoomControl />
         </Map>

@@ -13,12 +13,18 @@ body {
   margin: 0;
   font-size: 24px;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: scroll;
   font-family: 'Montserrat', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 660px) {
+  body {
+    overflow-x: hidden;
+  }
 }
 
 @media (max-width: 540px) {

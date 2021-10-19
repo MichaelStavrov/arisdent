@@ -23,10 +23,10 @@ const Header: FC = () => {
 
   const itemsNav = useMemo(
     () => [
-      { id: 1, name: 'О клинике', path: '/' },
+      { id: 1, name: 'О клинике', path: '/about' },
       { id: 2, name: 'Врачи', path: '/staff' },
       { id: 3, name: 'Цены', path: '/prices' },
-      { id: 4, name: 'Контакты', path: '/contacts' },
+      { id: 4, name: 'Контакты', path: '/' },
     ],
     []
   );

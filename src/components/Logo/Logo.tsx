@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import classes from './Logo.module.css';
-import iconLogo from '../../assets/images/logo.svg';
+import iconLogo from '../../assets/images/logo.jpg';
 import { LogoProps } from './types';
 
 const Logo: FC<LogoProps> = ({ menuView }) => {
@@ -18,13 +18,13 @@ const Logo: FC<LogoProps> = ({ menuView }) => {
             }
           : {}
       }
-      to='/'
+      to='/about'
     >
       <div className={classes.logoWithTitle}>
         <div className={classes.iconLogoWrapper}>
           <img
             className={classes.iconLogo}
-            style={menuView ? { width: 34, height: 46 } : {}}
+            style={menuView ? { width: 40, height: 35 } : {}}
             src={iconLogo}
             alt='логотип Арисдент'
           />

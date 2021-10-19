@@ -1,14 +1,37 @@
-import React, { FC } from 'react';
-import HelmetedPage from '../../components/HelmetedPage';
-import PersonCard from '../../components/PersonCard';
-import mainPerson from '../../assets/images/mainPerson.png';
-import license1 from '../../assets/images/license-1.png';
-import license2 from '../../assets/images/license-2.png';
-import license3 from '../../assets/images/license-3.png';
+import React, { FC, useEffect, useState } from 'react';
+import cn from 'classnames';
 
+import HelmetedPage from '../../components/HelmetedPage';
+import license1 from '../../assets/images/license1-large.jpg';
+import license2 from '../../assets/images/license2-large.jpg';
+import license3 from '../../assets/images/license3-large.jpg';
 import classes from './About.module.css';
 
 const About: FC = () => {
+  const [showLicenses, setShowLicenses] = useState({
+    license1: false,
+    license2: false,
+    license3: false,
+  });
+
+  useEffect(() => {
+    const setState = (e: MouseEvent) => {
+      const elem = e.target as HTMLElement;
+
+      if (!elem?.ariaLabel) {
+        setShowLicenses({
+          license1: false,
+          license2: false,
+          license3: false,
+        });
+      }
+    };
+
+    document.addEventListener('click', setState);
+
+    return () => document.removeEventListener('click', setState);
+  }, []);
+
   const advantages = [
     {
       id: 1,
@@ -56,37 +79,7 @@ const About: FC = () => {
         Семейная клиника, которая ориентирована на индивидуальный подход к
         пациенту
       </h2>
-      <div className={classes.personInfo}>
-        <div className={classes.cardWrapper}>
-          <PersonCard
-            image={mainPerson}
-            alt='Сыренов Олег Сергеевич - Главный врач'
-          />
-        </div>
-        <div className={classes.personDescription}>
-          <p>
-            <b>Главный врач</b>
-            <br />
-            Сыренов Олег Сергеевич
-          </p>
-          <br />
-          <p className={classes.mainPersonDescription}>
-            Врач стоматолог широкого профиля, имеющий дополнительную подготовку
-            по смежным специальностям и большой опыт работы в государственных
-            учреждениях и в частных сетевых клиниках
-          </p>
-        </div>
-      </div>
-      <p className={classes.mainPersonDescriptionSmallSize}>
-        Врач стоматолог широкого профиля, имеющий дополнительную подготовку по
-        смежным специальностям и большой опыт работы в государственных
-        учреждениях и в частных сетевых клиниках
-      </p>
       <div className={classes.companyDescription}>
-        <p className={classes.paragraphTitle}>
-          В организации работы нашей клиники мы использовали мировой опыт
-          лидеров в организации стоматологических услуг:
-        </p>
         <div className={classes.summary}>
           <p>
             Наша основная задача – обеспечение непрерывного и всестороннего
@@ -124,11 +117,56 @@ const About: FC = () => {
             </div>
           ))}
         </div>
-        <b className={classes.licensesTitle}>Лицензии:</b>
+        <b className={classes.licensesTitle}>Лицензия:</b>
         <div className={classes.licenses}>
-          <img src={license1} alt='Лицензия' />
-          <img src={license2} alt='Лицензия' />
-          <img src={license3} alt='Лицензия' />
+          <img
+            className={cn(classes.license, {
+              [classes.licenseScalable]: showLicenses.license1,
+            })}
+            id='license'
+            aria-label='license'
+            src={license1}
+            alt='Лицензия'
+            onClick={() =>
+              setShowLicenses((prev) => ({
+                license1: !prev.license1,
+                license2: false,
+                license3: false,
+              }))
+            }
+          />
+          <img
+            className={cn(classes.license, {
+              [classes.licenseScalable]: showLicenses.license2,
+            })}
+            id='license'
+            aria-label='license'
+            src={license2}
+            alt='Лицензия'
+            onClick={() =>
+              setShowLicenses((prev) => ({
+                license1: false,
+                license2: !prev.license2,
+                license3: false,
+              }))
+            }
+          />
+          <img
+            className={cn(classes.license, {
+              [classes.licenseScalable]: showLicenses.license3,
+            })}
+            id='license'
+            aria-label='license'
+            src={license3}
+            alt='Лицензия'
+            onClick={() =>
+              setShowLicenses((prev) => ({
+                license1: false,
+                license2: false,
+                license3: !prev.license3,
+              }))
+            }
+          />
         </div>
       </div>
     </HelmetedPage>

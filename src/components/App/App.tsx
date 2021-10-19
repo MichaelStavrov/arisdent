@@ -49,10 +49,10 @@ const App: FC = () => {
       <Header />
       <main>
         <Switch>
-          <Route exact path='/' component={About} />
+          <Route exact path='/' component={Contacts} />
+          <Route path='/about' component={About} />
           <Route path='/staff' component={Staff} />
           <Route path='/prices' component={Prices} />
-          <Route path='/contacts' component={Contacts} />
           <Route path='*' component={NotFound} />
         </Switch>
       </main>
