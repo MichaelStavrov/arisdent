@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import HelmetedPage from '../../components/HelmetedPage';
 import PersonCard from '../../components/PersonCard';
-import mainPerson from '../../assets/images/mainPerson.png';
+import mainPerson from '../../assets/images/mainPerson-cutted.jpg';
 import person from '../../assets/images/person.png';
 
 import classes from './Staff.module.css';

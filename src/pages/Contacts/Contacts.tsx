@@ -83,7 +83,7 @@ const Contacts: FC = () => {
               balloonCloseButton: true,
               strokeColor: '#9564ea',
               strokeWidth: 3,
-              strokeStyle: 'shortdash ',
+              strokeStyle: 'shortdash',
               strokeOpacity: 0.9,
               editorMaxPoints: 6,
             }}

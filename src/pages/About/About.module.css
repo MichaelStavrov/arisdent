@@ -10,6 +10,18 @@
   border-radius: 10px;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.logoIcon {
+  width: 250px;
+  height: 250px;
+}
+
 .cardWrapper {
   width: 339px;
   height: 253px;
@@ -42,7 +54,7 @@
 }
 
 .summary {
-  margin: 40px 0;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -94,7 +106,7 @@
 }
 
 .licenseScalable {
-  transform: scale(2.5);
+  transform: scale(3);
   transition: all 0.2s ease-in-out;
 }
 

@@ -5,6 +5,7 @@ import HelmetedPage from '../../components/HelmetedPage';
 import license1 from '../../assets/images/license1-large.jpg';
 import license2 from '../../assets/images/license2-large.jpg';
 import license3 from '../../assets/images/license3-large.jpg';
+import logo from '../../assets/images/logo.jpg';
 import classes from './About.module.css';
 
 const About: FC = () => {
@@ -79,6 +80,9 @@ const About: FC = () => {
         Семейная клиника, которая ориентирована на индивидуальный подход к
         пациенту
       </h2>
+      <div className={classes.logo}>
+        <img className={classes.logoIcon} src={logo} alt='логотип' />
+      </div>
       <div className={classes.companyDescription}>
         <div className={classes.summary}>
           <p>
