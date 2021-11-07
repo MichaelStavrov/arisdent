@@ -23,6 +23,17 @@
   height: 500px;
 }
 
+.tel,
+.mail {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.tel:hover,
+.mail:hover {
+  color: var(--active-color);
+}
+
 @media (max-width: 1024px) {
   .map {
     width: 750px;

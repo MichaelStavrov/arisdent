@@ -38,15 +38,17 @@ const Contacts: FC = () => {
           Бескудниковский бульвар, д. 2, корп. 1
         </p>
         <a className={classes.phoneNumber} href='tel:+79037240581'>
-          <span>Телефон:</span> +7 (903) 724-05-81
+          <span>Телефон:</span>{' '}
+          <span className={classes.tel}>+7 (903) 724-05-81</span>
+        </a>
+        <a className={classes.email} href='mailto:info@arisdent.com'>
+          <span>E-mail: </span>{' '}
+          <span className={classes.mail}>info@arisdent.com</span>
         </a>
         <p>
           <span>График работы:</span> Ежедневно с 10:00 до 20:00 по
           предварительной записи
         </p>
-        <a className={classes.email} href='mailto:info@arisdent.com'>
-          <span>E-mail: </span>info@arisdent.com
-        </a>
         <p>
           <span>Проезд общественным транспортом:</span>
           <br />
@@ -68,7 +70,7 @@ const Contacts: FC = () => {
             zoom: 18,
           }}
         >
-          <Placemark geometry={[55.85726, 37.563323]} />
+          <Placemark geometry={[55.857291, 37.563326]} />
           <Polyline
             geometry={[
               [55.857515, 37.560704],
@@ -77,7 +79,7 @@ const Contacts: FC = () => {
               [55.857525, 37.562428],
               [55.857645, 37.562628],
               [55.857586, 37.563385],
-              [55.85726, 37.563323],
+              [55.857291, 37.563326],
             ]}
             options={{
               balloonCloseButton: true,
