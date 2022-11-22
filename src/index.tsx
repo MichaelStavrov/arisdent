@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, hydrate } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { YMaps } from 'react-yandex-maps';
+import { YMaps } from '@pbe/react-yandex-maps';
 
 import './index.css';
 import App from './components/App';

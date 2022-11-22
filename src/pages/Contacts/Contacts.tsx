@@ -6,7 +6,7 @@ import {
   GeolocationControl,
   FullscreenControl,
   ZoomControl,
-} from 'react-yandex-maps';
+} from '@pbe/react-yandex-maps';
 
 import HelmetedPage from '../../components/HelmetedPage';
 import classes from './Contacts.module.css';
@@ -33,6 +33,11 @@ const Contacts: FC = () => {
         Адрес, телефон, подробная карта, как добраться до стоматологии Арисдент
       </h1>
       <div className={classes.contactsContainer}>
+        <span className={classes.tempText}>
+          Внимание! До 01.12.2022 клиника не работает.
+          <br /> Для записи пишите в WhatsApp по телефону
+          +7&nbsp;(903)&nbsp;724&#8209;05&#8209;81.
+        </span>
         <p>
           <span>Адрес:</span> г. Москва, станция метро Верхние Лихоборы,
           Бескудниковский бульвар, д. 2, корп. 1
@@ -82,12 +87,10 @@ const Contacts: FC = () => {
               [55.857291, 37.563326],
             ]}
             options={{
-              balloonCloseButton: true,
               strokeColor: '#9564ea',
               strokeWidth: 3,
               strokeStyle: 'shortdash',
               strokeOpacity: 0.9,
-              editorMaxPoints: 6,
             }}
           />
           <GeolocationControl />
